@@ -1,0 +1,31 @@
+.block{
+	border:  solid 5px black;
+	padding: 15px;
+}
+
+#app, #app1, #app2{
+	text-align: center;
+	border: 1px solid #666;
+	padding: 10px 0px;
+	margin-top: 10px;
+}
+
+
+.large{
+	font-size: 20px;
+
+}
+
+li {
+    list-style-type: none; 
+ }
+
+ .formVua{
+ 	border: 1px solid red;
+ 	text-align: left;
+ }
+
+ .bcColor, .inColor{
+ 	margin-top: 2px;
+ 	width: 90%;
+ }

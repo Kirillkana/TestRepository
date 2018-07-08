@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Bootstrap work</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+	</script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+	</script>
+
+	<!-- My CSS3 -->
+	<link rel="stylesheet" type = "text/css" href="mystyle.css">
+
+</head>
+	
+<body class = "body">
+
+	<div class="container">
+		<div class = "row">
+			<div class = "block col-xl-6 col col-lg-12">
+				Block One
+			</div>
+			<div class = "block col-xl-6 col col-lg-12">
+				Block Two
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+	  <div class="row justify-content-md-center">
+	    <div class="col col-lg-2">
+	      1 из 3
+	    </div>
+	    <div class="col-md-auto">
+	      Содержимое адаптивной ширины
+	    </div>
+	    <div class="col col-lg-2">
+	      3 из 3
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col">
+	      1 из 3
+	    </div>
+	    <div class="col-md-auto">
+	      Содержимое адаптивной ширины
+	    </div>
+	    <div class="col col-lg-2">
+	      3 из 3
+	    </div>
+	  </div>
+	</div>
+
+<div id="app">
+  {{ message }}
+  <input class = "col-xl-6 col col-lg-12" type="text" name="textone" v-model = "message">
+  <button v-on:click = "reverseText" class = "btn btn-success">REVERSE</button>
+</div>
+
+<div id="app1">
+  <a class="a1" v-bind:href="href" v-show = "visibleInput"> {{ count }} </a>
+  <input class = "col-xl-6 col col-lg-12" type="text" name="texttwo" v-model = "count" v-on:change = "changeText" >
+  <button v-on:click = "upCount" class = "btn btn-success">UP</button>
+  <button v-on:click = "downCount" class = "btn btn-success">Down</button>
+</div>
+
+<div id = "app2">
+	<div class="container">
+	  <div class="row justify-content-md-center">
+	  	<div class = "formVua col-xl-6 col col-lg-12">
+			<button v-bind:class = "[sizeToggle ? 'large' : '', {'rounded' : isRounded}]" v-bind:style="styles" v-bind:disabled = "disabled" >CHANGEABLE</button>
+			<ul>
+				<li><input type="checkbox" v-model = "sizeToggle" name=""><label>Increase font</label></li>
+				<li><input type="checkbox" v-model = "isRounded" name=""><label>Round button</label></li>
+				<li><input type="checkbox" v-model = "disabled" name=""><label>Disable button</label></li>
+
+				<li><input class = "inColor" type="text" v-model = "fontColor" name=""></li>
+				<li><input class = "bcColor" type="text" v-model = "backgroundColor" name=""></li>
+			</ul>
+		</div>
+
+	   <div class = "formVua col-xl-6 col col-lg-12">
+			<button v-bind:class = "[sizeToggle ? 'large' : '', {'rounded' : isRounded}]" v-bind:style="styles" v-bind:disabled = "disabled" >CHANGEABLE</button>
+			<ul>
+				<li><input type="checkbox" v-model = "sizeToggle" name=""><label>Increase font</label></li>
+				<li><input type="checkbox" v-model = "isRounded" name=""><label>Round button</label></li>
+				<li><input type="checkbox" v-model = "disabled" name=""><label>Disable button</label></li>
+
+				<li><input class = "inColor" type="text" v-model = "fontColor" name=""></li>
+				<li><input class = "bcColor" type="text" v-model = "backgroundColor" name=""></li>
+			</ul>
+		</div>
+	  </div>
+
+	</div>
+
+
+</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script  src = "script.js"></script>
+
+</body>
+
+</html>
